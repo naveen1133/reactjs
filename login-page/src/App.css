@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+/* App.css */
+.toggle-link {
+  text-align: center;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+
