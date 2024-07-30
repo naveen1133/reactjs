@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './Login.css'; // Import CSS for styling
+import { Link } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -12,12 +13,11 @@ const Login = () => {
       setError('Please fill in all fields');
       return;
     }
-    // Add your login logic here
-    // For example, make an API call to authenticate the user
 
+    // Add your login logic here
     console.log('Email:', email);
     console.log('Password:', password);
-    setError(''); // Clear any previous errors
+    setError('');
   };
 
   return (
@@ -47,6 +47,9 @@ const Login = () => {
         </div>
         <button type="submit">Login</button>
       </form>
+      <p className="toggle-link">
+        Don't have an account? <Link to="/signup">Sign Up</Link>
+      </p>
     </div>
   );
 };

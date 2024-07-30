@@ -1,6 +1,6 @@
-// SignUp.js
 import React, { useState } from 'react';
-import './Login.css'; // Reusing the same CSS file for consistency
+import { Link } from 'react-router-dom';
+import './Login.css';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -18,12 +18,11 @@ const SignUp = () => {
       setError('Passwords do not match');
       return;
     }
-    // Add your sign-up logic here
-    // For example, make an API call to register the user
 
+    // Add your sign-up logic here
     console.log('Email:', email);
     console.log('Password:', password);
-    setError(''); // Clear any previous errors
+    setError('');
   };
 
   return (
@@ -63,6 +62,9 @@ const SignUp = () => {
         </div>
         <button type="submit">Sign Up</button>
       </form>
+      <p className="toggle-link">
+        Already have an account? <Link to="/">Login</Link>
+      </p>
     </div>
   );
 };
